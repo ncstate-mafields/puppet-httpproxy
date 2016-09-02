@@ -2,8 +2,9 @@ httpproxy
 =============
 
 [![Build Status](https://travis-ci.org/MiamiOH/puppet-httpproxy.svg?branch=master)](https://travis-ci.org/MiamiOH/puppet-httpproxy)
-[![Puppet Forge](https://img.shields.io/puppetforge/v/MiamiOH/httpproxy.svg)](https://forge.puppetlabs.com/MiamiOH/httpproxy)
-[![Issue Stats](http://issuestats.com/github/MiamiOH/puppet-httpproxy/badge/pr?style=flat)](http://issuestats.com/github/MiamiOH/puppet-httpproxy)
+[![Puppet Forge](https://img.shields.io/puppetforge/v/MiamiOH/httpproxy.svg)](https://forge.puppet.com/MiamiOH/httpproxy)
+[![Puppet Forge Downloads](https://img.shields.io/puppetforge/dt/MiamiOH/httpproxy.svg)](https://forge.puppet.com/MiamiOH/httpproxy)
+[![Puppet Forge Score](https://img.shields.io/puppetforge/f/MiamiOH/httpproxy.svg)](https://forge.puppet.com/MiamiOH/httpproxy/scores)
 
 #### Table of Contents
 
