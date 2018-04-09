@@ -46,7 +46,7 @@ Please contribute, pull requests are welcome. The more proxies that can be manag
 
 ## Limitations
 
-This module has been tested against Puppet 3.8.1, 4, CentOS 5,6,7, and Ubuntu 14.04.  
+This module has been tested against Puppet 4, CentOS 5,6,7, and Ubuntu 14.04.  
 
 ## Contributors
 

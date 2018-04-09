@@ -2,19 +2,14 @@
 # Manages http proxies for various software
 # Defines the httpproxy class. Sets the $http_proxy and $http_proxy_port variable to null.
 class httpproxy (
-  $http_proxy      = undef,
-  $http_proxy_port = undef,
+  Optional[Stdlib::Host] $http_proxy      = undef,
+  Optional[Stdlib::Port] $http_proxy_port = undef,
   $no_proxy        = undef,
   $profiled        = true,
   $packagemanager  = true,
   $wget            = false,
-  $purge_apt_conf  = false,
+  Boolean $purge_apt_conf  = false,
 ){
-
-  # Validates that $http_proxy and $http_proxy_port are domain names and ports respectively.
-  if $http_proxy { validate_re($http_proxy, '^([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,}$') }
-  if $http_proxy_port { validate_re($http_proxy_port, '^\d+$') }
-  validate_bool($purge_apt_conf)
 
   # Checks if $http_proxy contains a string. If $http_proxy is null $ensure is set to absent.
   # If $http_proxy contains a string then $ensure is set to present.

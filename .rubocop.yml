@@ -20,9 +20,14 @@ AllCops:
     - 'vendor/**/*'
   DisplayCopNames: true
 
-Metrics/LineLength:
-  # Ruduce this... Max: 80
-  Max: 111
+#################### Layout ###############################
+
+# The shebang stuff at the top triggers this
+Style/LeadingCommentSpace:
+  Exclude:
+    - Puppetfile
+
+#################### Style ###############################
 
 # Cop supports --auto-correct.
 # Configuration parameters: SupportedStyles.
@@ -30,7 +35,19 @@ Metrics/LineLength:
 Style/HashSyntax:
   EnforcedStyle: hash_rockets
 
-# The shebang stuff at the top triggers this
-Style/LeadingCommentSpace:
-  Exclude:
-    - Puppetfile
+Style/MixinUsage:
+  Enabled: false
+
+#################### Metrics ###############################
+
+Metrics/LineLength:
+  # Ruduce this... Max: 80
+  Max: 111
+
+Metrics/BlockLength:
+  Enabled: false
+
+##################### Bundler ##############################
+
+Bundler/DuplicatedGem:
+  Enabled: false
