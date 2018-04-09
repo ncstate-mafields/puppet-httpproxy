@@ -26,7 +26,7 @@ describe 'httpproxy' do
         let(:params) do
           {
             :http_proxy      => 'proxy.test.com',
-            :http_proxy_port => '80',
+            :http_proxy_port => 80,
             :profiled        => true,
             :packagemanager  => true,
             :wget            => true,
@@ -51,7 +51,7 @@ describe 'httpproxy' do
         let(:params) do
           {
             :http_proxy      => 'proxy.test.com',
-            :http_proxy_port => '80',
+            :http_proxy_port => 80,
             :profiled        => false,
             :packagemanager  => false,
             :wget            => false,
