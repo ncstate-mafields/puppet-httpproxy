@@ -2,6 +2,24 @@
 
 mock_with: ':rspec'
 
+.gitlab-ci.yml:
+  bundler_args: |
+    --without system_tests --path vendor/bundle
+    cache:
+      key: "$CI_JOB_STAGE-$CI_COMMIT_REF_NAME"
+      paths:
+        - vendor/bundle
+
+.travis.yml:
+  bundler_args: --without system_tests
+  includes:
+    - env: PUPPET_GEM_VERSION="~> 5.0" CHECK=build DEPLOY_TO_FORGE=yes
+  branches:
+    - /^\d/
+  deploy: true
+  user: MiamiOH
+  secure: "Fr3vS85LwKYBgWgPq0tnZwfNdFOUt0ONmpUYIlqBKVkpiXTtp+lii2NuLK8Bb5X0v8ccymFNXIlGvZiEKyRYAChLtS/Cx5M/scgRpqIlCLYiXZobtDVGKmgLZx7RzgVL6LkQHC1upHb0SWI9ODbw1L6EaS5drkmsw8awIxrRfuj4726rDxP/kqJkGY3TVJR8mwKsplZRo3qCg5XzgFFacZ/sAsogslLbecO/wZAOvBk5skjboxjz/CHEPn5Qqq0bDrY4uOmBI5WEInBoJke1OH6oivc177FwfmIjOQAdtpJdGBVj60lqdt/vvGjC0c3nzSKat5iu6GpYyxb/CmZMbL/oew02Tix+h3dv1ihitfA3QPHwSn84qWrCVpOE1Cy+nOKZbHIvyH24H0f7Q7tmwnOG0eI8Ya7mJZ8AT782FZaDOatPPbA08bknuVr5NN6Y8EaM6oyGUnE9ce7Qjca1u/BhCobcYDCQoG1SyX8AxjWLOU3vymuI6EEMor7oRUUitv6qf/Z7l+jwLcJNFEIzszvwt4Doa7gy5/Ft6t34ADy+NBPWS4Bi6AlDfc+xRuP9l6gqh5SL4n7NMTz+pAA0wzj45hlt2bRGg75zLYI5sB+9jZtYCUt6uXu/9kh0UOKPoq7U4Pnu8eA5POOn8JIvWrhukBaTHXU8x0hD9oUxeZA="
+
 Gemfile:
   required:
     ':development':
