@@ -9,12 +9,12 @@ class httpproxy::packagemanager {
 
   case $::osfamily {
     'RedHat': {
-      contain '::httpproxy::package::rpm'
-      contain '::httpproxy::package::yum'
+      contain 'httpproxy::package::rpm'
+      contain 'httpproxy::package::yum'
     }
     'Debian': {
-      contain '::httpproxy::package::apt'
-      if $httpproxy::purge_apt_conf { contain '::httpproxy::package::purge_apt_conf' }
+      contain 'httpproxy::package::apt'
+      if $httpproxy::purge_apt_conf { contain 'httpproxy::package::purge_apt_conf' }
     }
     default: { fail('your distro is not supported') }
   }
