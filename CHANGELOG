@@ -1,3 +1,8 @@
+2020-03-10 (2.0.1) 
+        * Change absolute class names
+        * Bump dependency versions
+        * Incorporate PDK
+        
 2018-04-09 (2.0.0)  Chris Edester
         * Update for puppet 4
         * Drop support for puppet 3
