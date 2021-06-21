@@ -76,6 +76,6 @@
     "linux"
   ],
   "pdk-version": "2.1.0",
-  "template-url": "https://github.com/puppetlabs/pdk-templates#1.9.0",
-  "template-ref": "tags/1.9.0-0-g7281db5"
+  "template-url": "https://github.com/puppetlabs/pdk-templates#2.1.0",
+  "template-ref": "tags/2.1.0-0-ga675ea5"
 }
