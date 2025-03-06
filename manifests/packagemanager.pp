@@ -7,7 +7,7 @@ class httpproxy::packagemanager {
     default => $httpproxy::packagemanager,
   }
 
-  case $::osfamily {
+  case $::facts['os']['family'] {
     'RedHat': {
       contain 'httpproxy::package::rpm'
       contain 'httpproxy::package::yum'
